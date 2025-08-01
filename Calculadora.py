@@ -5,31 +5,87 @@ import math
 class CalculadoraUnidades:
     @staticmethod
     def metros_a_centimetros(metros):
-        return metros * 100
+        """
+        Convierte metros a centímetros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(metros) * 100
+        except (ValueError, TypeError):
+            print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def millas_a_kilometros(millas):
-        return millas * 1.60934
+        """
+        Convierte millas a kilómetros.
+        Maneja errores si el valor no es numérico.3
+        """
+        try:
+            return float(millas) * 1.60934
+        except (ValueError, TypeError):
+            print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def centimetros_a_metros(centimetros):
-        return centimetros / 100
+        """
+        Convierte centímetros a metros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(centimetros) / 100
+        except (ValueError, TypeError):
+            print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def metros_a_milimetros(metros):
-        return metros * 1000
+        """
+        Convierte metros a milímetros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(metros) * 1000
+        except (ValueError, TypeError):
+            print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def milimetros_a_metros(milimetros):
-        return milimetros / 1000
+        """
+        Convierte milímetros a metros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(milimetros) / 1000
+        except (ValueError, TypeError):
+            print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def metros_a_kilometros(metros):
-        return metros / 1000000
+        """
+        Convierte metros a kilómetros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(metros) / 1000000
+        except (ValueError, TypeError):
+            print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def kilometros_a_metros(kilometros):
-        return kilometros * 1000000
+        """
+        Convierte kilómetros a metros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(kilometros) * 1000000
+        except (ValueError, TypeError):
+            print("Error: El valor ingresado no es numérico.")
+            return None
 
 def mostrar_menu():
     print("\nCalculadora de Medidas")
