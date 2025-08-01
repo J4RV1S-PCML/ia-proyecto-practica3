@@ -3,12 +3,18 @@
 # Data: [Data de Criação]
 # Descrição: Este script implementa uma calculadora simples para converter medidas entre diferentes unidades.   
 # Importando bibliotecas necessárias
+# Feat: agrega km_a_millas()
+# Função para converter quilômetros para milhas
+
+# Função para converter milhas para quilômetros 
 import sys  
 import os   
 import math
 # Função para converter metros para centímetros
 def metros_para_centimetros(metros):
     return metros * 100
+def milhas_para_quilometros(milhas):
+    return milhas * 1.60934
 # Função para converter centímetros para metros
 def centimetros_para_metros(centimetros):
     return centimetros / 100
