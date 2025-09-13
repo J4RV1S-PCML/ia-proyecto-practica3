@@ -5,31 +5,107 @@ import math
 class CalculadoraUnidades:
     @staticmethod
     def metros_a_centimetros(metros):
-        return metros * 100
+        """
+        Convierte metros a centímetros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(metros) * 100
+        except (ValueError, TypeError):
+            if not hasattr(sys, '_called_from_test'):
+                print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def millas_a_kilometros(millas):
-        return millas * 1.60934
+        """
+        Convierte millas a kilómetros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(millas) * 1.60934
+        except (ValueError, TypeError):
+            if not hasattr(sys, '_called_from_test'):
+                print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def centimetros_a_metros(centimetros):
-        return centimetros / 100
+        """
+        Convierte centímetros a metros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(centimetros) / 100
+        except (ValueError, TypeError):
+            if not hasattr(sys, '_called_from_test'):
+                print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def metros_a_milimetros(metros):
-        return metros * 1000
+        """
+        Convierte metros a milímetros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(metros) * 1000
+        except (ValueError, TypeError):
+            if not hasattr(sys, '_called_from_test'):
+                print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def milimetros_a_metros(milimetros):
-        return milimetros / 1000
+        """
+        Convierte milímetros a metros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(milimetros) / 1000
+        except (ValueError, TypeError):
+            if not hasattr(sys, '_called_from_test'):
+                print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def metros_a_kilometros(metros):
-        return metros / 1000000
+        """
+        Convierte metros a kilómetros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(metros) / 1000
+        except (ValueError, TypeError):
+            if not hasattr(sys, '_called_from_test'):
+                print("Error: El valor ingresado no es numérico.")
+            return None
     
     @staticmethod
     def kilometros_a_metros(kilometros):
-        return kilometros * 1000000
+        """
+        Convierte kilómetros a metros.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(kilometros) * 1000
+        except (ValueError, TypeError):
+            if not hasattr(sys, '_called_from_test'):
+                print("Error: El valor ingresado no es numérico.")
+            return None
+    
+    @staticmethod
+    def kilometros_a_millas(kilometros):
+        """
+        Convierte kilómetros a millas.
+        Maneja errores si el valor no es numérico.
+        """
+        try:
+            return float(kilometros) / 1.60934
+        except (ValueError, TypeError):
+            if not hasattr(sys, '_called_from_test'):
+                print("Error: El valor ingresado no es numérico.")
+            return None
 
 def mostrar_menu():
     print("\nCalculadora de Medidas")
@@ -39,6 +115,8 @@ def mostrar_menu():
     print("4. Convertir milímetros a metros")
     print("5. Convertir metros a kilómetros")
     print("6. Convertir kilómetros a metros")
+    print("7. Convertir millas a kilómetros")
+    print("8. Convertir kilómetros a millas")
     print("0. Salir")    
     print()
     return input("Elija una opción: ")
@@ -54,7 +132,7 @@ def main():
                 print("Saliendo del programa...")
                 break
                 
-            if opcion not in ["1", "2", "3", "4", "5", "6"]:
+            if opcion not in ["1", "2", "3", "4", "5", "6", "7", "8"]:
                 print("Opción inválida. Intente nuevamente.")
                 continue
                 
@@ -64,7 +142,9 @@ def main():
                 "3": (calc.metros_a_milimetros, "metros", "milímetros"),
                 "4": (calc.milimetros_a_metros, "milímetros", "metros"),
                 "5": (calc.metros_a_kilometros, "metros", "kilómetros"),
-                "6": (calc.kilometros_a_metros, "kilómetros", "metros")
+                "6": (calc.kilometros_a_metros, "kilómetros", "metros"),
+                "7": (calc.millas_a_kilometros, "millas", "kilómetros"),
+                "8": (calc.kilometros_a_millas, "kilómetros", "millas")
             }
             
             funcion, unidad_entrada, unidad_salida = conversiones[opcion]
